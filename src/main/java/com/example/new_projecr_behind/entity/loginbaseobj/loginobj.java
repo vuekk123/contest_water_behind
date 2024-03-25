@@ -8,27 +8,20 @@ public class loginobj {
     private String accessToken;
     private String refreshToken;
     private String expires;
+    private String warn;
 
     public loginobj() {
+
     }
 
-    public loginobj(String[] roles, String username, String accessToken, String refreshToken, String expires) {
+    public loginobj(String[] roles, String username, String accessToken, String refreshToken, String expires,
+                    String warn) {
         this.roles = roles;
         this.username = username;
         this.accessToken = accessToken;
         this.refreshToken = refreshToken;
         this.expires = expires;
-    }
-
-    @Override
-    public String toString() {
-        return "loginobj{" +
-                "roles=" + Arrays.toString(roles) +
-                ", username='" + username + '\'' +
-                ", accessToken='" + accessToken + '\'' +
-                ", refreshToken='" + refreshToken + '\'' +
-                ", expires='" + expires + '\'' +
-                '}';
+        this.warn = warn;
     }
 
     public String[] getRoles() {
@@ -69,5 +62,25 @@ public class loginobj {
 
     public void setExpires(String expires) {
         this.expires = expires;
+    }
+
+    public String getWarn() {
+        return warn;
+    }
+
+    public void setWarn(String warn) {
+        this.warn = warn;
+    }
+
+    @Override
+    public String toString() {
+        return "loginobj{" +
+                "roles=" + Arrays.toString(roles) +
+                ", username='" + username + '\'' +
+                ", accessToken='" + accessToken + '\'' +
+                ", refreshToken='" + refreshToken + '\'' +
+                ", expires='" + expires + '\'' +
+                ", warn='" + warn + '\'' +
+                '}';
     }
 }

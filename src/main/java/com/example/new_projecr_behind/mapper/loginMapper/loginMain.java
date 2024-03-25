@@ -9,8 +9,10 @@ import org.springframework.stereotype.Repository;
 
 @Mapper
 @Repository
+
 public interface loginMain {
-    @Select("select * from userinfo_login where username = #{username} and password = #{password}")
+    @Select("SELECT * FROM userinfo_login WHERE BINARY username = #{username} AND BINARY password = #{password}")
     loginbaseinfo GetAccountInfo(@Param("username") String username,
                                  @Param("password") String password);
+
 }

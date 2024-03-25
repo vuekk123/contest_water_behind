@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class registMainService {
     @Autowired
     private registMain registMain;
-    public int registRuslt(String username,String password){
-       return registMain.regsitAccount(username,password,"common");
+    public int registRuslt(String username,String password,String tele){
+       return registMain.regsitAccount(username,password,tele,"common");
     }
 }

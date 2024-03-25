@@ -1,5 +1,5 @@
 package com.example.new_projecr_behind.entity.loginbaseobj;
-public class loginreturn {
+public class   loginreturn {
     private Boolean success;
     private loginobj data;
 
